@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID" runat="server" class="home">
+<form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+
+<!-- Creates Black Platform Background -->
+<div class="bg-black">
+<div class="platform">
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"  data-role="content">        
+ 
+    
+<!--###### BEGIN BILLBOARD ######-->
+               
+        <div id="billboard" class="sixteen column">
+        
+          <div id="billboard_message" class="seven columns alpha">
+              <h2 class="text-grad">Matrix Means Media</h2>
+              <h3><span class="text-grad">Better sales intelligence</span> <span class="text-grad">across your enterprise</span></h3>
+          </div><!--/#billboard_message -->
+          
+          <div id="billboard_panels" class="nine columns alpha omega">
+          
+            <div id="panel1" class="panel" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="panel_img front"><img src="images/panel1.png"></div><!--/.panel_img -->
+                <div class="panel_info back">
+                  <a href="media-crm.aspx">
+                      <h3>Media CRM</h3>
+                      <p><span class="break">Industry-leading,</span>
+                      <span class="break">media-specific,</span>
+                      workflow optimized</p>
+                  </a>
+                </div><!--/.panel_info -->
+                </div><!--/.flipper -->
+            </div><!--/.panel -->
+            
+            <div id="panel2" class="panel" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="panel_img front"><img src="images/panel2.png"></div><!--/.panel_img -->
+                <div class="panel_info back">
+                  <a href="data-cleansing.aspx">
+                      <h3><span class="break">Data Cleansing</span>
+                      &amp; Normalization</h3>
+                      <p><span class="break">User-defined business rules</span>
+                      from any enterprise source</p>
+                  </a>
+                </div><!--/.panel_info -->
+              </div><!--/.flipper -->
+            </div><!--/.panel -->
+            
+            <div id="panel3" class="panel" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="panel_img front"><img src="images/panel3.png"></div><!--/.panel_img -->
+                <div class="panel_info back">
+                  <a href="analytics-reporting.aspx">
+                      <h3><span class="break">Analytics</span>
+                      &amp; Reporting</h3>
+                      <p><span class="break">Inspect, model, and process</span>
+                      data into sales intelligence</p>
+                  </a>
+                </div><!--/.panel_info -->
+              </div><!--/.flipper -->
+            </div><!--/.panel -->
+            
+            <div id="panel4" class="panel" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="panel_img front"><img src="images/panel4.png"></div><!--/.panel_img -->
+                <div class="panel_info back">
+                  <a href="information-technology.aspx">
+                      <h3>Access Anywhere</h3>
+                      <p><span class="break">Cloud-based, intuitive,</span>
+                      <span class="break">multi-platform</span>
+                      user interface</p>
+                  </a>
+                </div><!--/.panel_info -->
+              </div><!--/.flipper -->
+            </div><!--/.panel -->
+          
+          </div><!--/#billboard_panels -->
+        
+        </div><!--/#billboard -->
+
+</div><!--/.container-->
+
+
+</div><!--/.platform -->
+</div><!--/.bg-black -->
+
+<!--###### END BILLBOARD ######-->
+
+<!--###### BEGIN BUCKETS ######-->
+
+    <div class="container">
+<div id="bucket_area" class="sixteen columns">
+  
+    <div id="bucket_left" class="eight columns alpha">
+      <h3>Can your sales automation pay for itself?</h3>
+      <a href="whitepaper.aspx" class="link_arrow">White Paper</a>
+      <a href="how-it-works.aspx" class="link_arrow">Video</a>
+    </div><!--/#bucket_left -->
+    
+        
+    <div id="bucket_right" class="seven columns offset-by-one omega">
+      <h3>Matrix :: Birdseye View</h3>
+      
+      <div class="feature">
+      <a href="http://www.nab.org/2013SMTE/" target="_blank">
+        <img src="images/birdseye_nab.jpg"></a>
+        
+        <div class="birdseye_writeup">
+          <p><strong>September 26-28:</strong> See Matrix in action at NAB's Small Market Television Exchange (SMTE). Our cloud-based media sales platform will be demonstrated at Booth #34</p>
+          
+          <a href="http://www.nab.org/2013SMTE/" class="link_arrow" target="_blank">Learn More</a>
+        </div><!--/.birdseye_writeup -->
+      </div><!--/.feature -->
+      
+    </div><!--/#bucket_right -->
+    
+  </div><!--/#bucket_area -->
+  
+  </div><!--/.container -->
+
+    <!--###### END BUCKETS ######-->
+
+
+<tme:footer ID="footer" runat="server" />
+
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+</asp:Content>

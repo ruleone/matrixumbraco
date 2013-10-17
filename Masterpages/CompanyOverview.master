@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID" runat="server" class="interior company">
+    <form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <div id="billboard-company" class="photo_overview columns sixteen">     
+    <div class="headline_bg">
+      <h1><umbraco:Item field="pageHeadline" runat="server" /></h1>
+      <h2><umbraco:Item field="pageSubHeadline" runat="server" /></h2>
+    </div><!--/.headline_bg -->   
+  </div><!--/#billboard_int -->
+  
+  <div id="main_content" class="columns sixteen">
+   
+  <div class="columns sixteen lead_in">
+  <p><umbraco:Item field="leadInCopy" runat="server" /></p>
+  
+  </div><!--/#lead_in -->
+   
+    
+    <div id="content_left" class="columns nine alpha omega">  
+    
+        <umbraco:Item field="pageCopy" runat="server" />
+ 
+<div class="actions">
+<!-- Calls to action -->
+<a href="demo.aspx" class="c2a green_bg">Schedule Demo</a>
+
+<p>Learn why <a href="contact-us.aspx">Matrix Means Media</a></p>
+</div><!--/.actions -->      
+      
+      </div><!--/#content_left --> 
+      
+  
+  <aside id="green_callout" class="columns five omega">
+  <!--<img src="images/company-overview-thumb.jpg" class="green_callout_img">-->
+    <p class="white_squares"><umbraco:Item field="calloutHeadline" runat="server" /></p>
+    <umbraco:Item field="calloutCopy" runat="server" />
+  </aside>
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>

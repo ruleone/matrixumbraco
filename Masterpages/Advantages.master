@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID"  runat="server" class="interior advantages">
+<form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <div id="billboard-advantages" class="columns sixteen green-border">
+  <!-- Billboard Image -->
+  <umbraco:Item field="interiorBillboard" xslt="concat('&lt;img src=&quot;',umbraco.library:GetMedia({0}, false())/umbracoFile, '&quot; alt=&quot;',umbraco.library:GetMedia({0}, false())/@nodeName, '&quot; /&gt;')" xsltDisableEscaping="true" runat="server"/>
+    <!--<img src="images/billboards/billboard-advantages-acct-exec.jpg">-->
+  </div><!--/#billboard-advantages -->
+  
+  <div id="main_content" class="columns sixteen">
+
+
+<!-- ################ Left Column  ###################### --> 
+<div id="content_left" class="columns eleven alpha omega">
+    
+    <h1><umbraco:Item field="pageHeadline" runat="server" /></h1>
+    <!--<h1>Matrix for Account Executives</h1>-->
+    
+    <div class="lead_in">
+    <p><umbraco:Item field="leadInCopy" runat="server" /></p>
+    </div><!--/.lead_in -->
+      
+
+    <umbraco:Item field="pageCopy" runat="server" />
+      
+
+      <div class="actions">
+      <!-- Calls to action -->
+      <a href="demo.aspx" class="c2a green_bg">Schedule Demo</a>
+      
+      <p>Learn why <a href="contact-us.aspx">Matrix Means Media</a></p>
+      </div><!--/.actions -->
+      
+      </div><!--/#content_left --> 
+
+<!-- ################ END  Left Column  ###################### -->
+
+
+
+<!-- ################ Sidebar ###################### -->
+  <div id="sidebar" class="columns four alpha omega">
+    
+    <div class="feature_box">
+      <a href="whitepaper.aspx" class="whitepaper">
+          <h3>Download Whitepaper</h3>
+          <p>"An Industry Challenge:  Managing Advertising Sales"</p>
+      </a>
+        
+    </div><!--/#feature -->
+    
+    <div class="feature_box">
+      <a href="pdf/Matrix-User-Report-TownSquare-Media.pdf" class="casestudy">
+          <h3>Download Case Study</h3>
+          <p>Townsquare Media Leverages Mobile to Sell More Effectively</p>
+      </a>
+        
+    </div><!--/#feature -->
+    
+    
+    <div class="video_thumb">
+      <a href="how-it-works.aspx"><img src="images/ph-video_thumb.png" alt=""></a>
+    </div><!--/#video_thumb -->
+  
+  </div><!--/#sidebar -->
+<!-- ################ Sidebar ###################### -->
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>

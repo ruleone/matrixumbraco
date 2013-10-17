@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/masterpages/Homepage.Master.cs" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head runat="server">
+
+	<!-- Basic Page Needs ======== -->
+	<meta charset="utf-8">
+
+    <title><asp:ContentPlaceHolder ID="titleContent" runat="server" /><%= " :: Media CRM & Sales Analytics Platform"%></title>
+    <asp:ContentPlaceHolder runat="server" ID="meta_tags" />
+  
+    <tme:commonhead ID="commonhead" runat="server" />
+
+    <!-- Placeholder for any additional head items -->
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+
+</head>
+<body id="bodyID" runat="server" class="home">
+    <form runat="server">
+<div id="mobile_page_wrap" data-role="page">
+<!-- Primary Page Layout
+================================================== -->
+
+<div class="bg-black">
+<div class="platform">
+
+<tme:header ID="header" runat="server" />
+
+<asp:ContentPlaceHolder runat="server" ID="HomepageContent" />
+
+</div><!--/.platform -->
+</div><!--/.bg-black -->
+
+<asp:ContentPlaceHolder runat="server" ID="Buckets" />
+
+<tme:footer ID="footer" runat="server" />
+</div><!--/#mobile_page_wrap -->
+
+</form>
+</body>
+</html>

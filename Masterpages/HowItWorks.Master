@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID" runat="server" class="interior solutions">
+    <form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <asp:ContentPlaceHolder runat="server" ID="InteriorBillboard" />
+  
+  <div id="main_content" class="columns sixteen">
+   
+  <asp:ContentPlaceHolder runat="server" ID="InteriorContent" />
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>

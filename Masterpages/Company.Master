@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head runat="server">
+
+	<!-- Basic Page Needs ======== -->
+	<meta charset="utf-8">
+
+    <title><asp:ContentPlaceHolder ID="titleContent" runat="server" /><%=" :: Media CRM & Sales Analytics Platform"%></title>
+    <asp:ContentPlaceHolder runat="server" ID="meta_tags" />
+  
+    <tme:commonhead ID="commonhead" runat="server" />
+
+    <!-- Placeholder for any additional head items -->
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+
+</head>
+<body id="bodyID" runat="server" class="interior company">
+    <form runat="server">
+<div id="mobile_page_wrap" data-role="page">
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <asp:ContentPlaceHolder runat="server" ID="InteriorBillboard" />
+  
+  <div id="main_content" class="columns sixteen">
+   
+  <asp:ContentPlaceHolder runat="server" ID="InteriorContent" />
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+</div><!--/#mobile_page_wrap -->
+
+</form>
+</body>
+</html>

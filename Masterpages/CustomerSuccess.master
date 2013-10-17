@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID" runat="server" class="interior company">
+    <form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <div id="billboard-company" class="photo_customer company_section columns sixteen">    
+    <div class="headline_bg">
+      <h1><umbraco:Item field="pageHeadline" runat="server" /></h1>
+      <h2><umbraco:Item field="pageSubHeadline" runat="server" /></h2>
+    </div><!--/.headline_bg -->   
+  </div><!--/#billboard_int -->
+  
+  <div id="main_content" class="columns sixteen">
+   
+  <div class="columns sixteen lead_in">
+  <p><umbraco:Item field="leadInCopy" runat="server" /></p>
+  </div><!--/#lead_in -->
+   
+    
+    <div id="content_left" class="columns eleven alpha omega">  
+    
+        <umbraco:Item field="pageCopy" runat="server" />
+        
+      </div><!--/#content_left --> 
+      
+  
+<div id="sidebar" class="columns four alpha omega">
+  
+    <a href="demo.aspx" class="c2a green_bg">Schedule Demo</a>
+    
+    <div class="feature_box">
+      <a href="whitepaper.aspx" class="whitepaper">
+          <h3>Download Whitepaper</h3>
+          <p>"An Industry Challenge:  Managing Advertising Sales"</p>
+      </a>
+        
+    </div><!--/#feature -->
+    
+    <div class="video_thumb">
+      <a href="how-it-works.aspx"><img src="images/ph-video_thumb.png" alt=""></a>
+    </div><!--/#video_thumb -->
+  
+  </div><!--/#sidebar -->
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>

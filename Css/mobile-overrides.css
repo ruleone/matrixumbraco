@@ -1,0 +1,9 @@
+
+
+/* jQuery Mobile overrides */
+.ui-mobile .ui-page { display:block;}
+
+.ui-loading .ui-loader { display: none; }
+.ui-panel-inner { padding:20px; background:yellow;}
+
+.ui-content { padding:0;}

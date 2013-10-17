@@ -1,0 +1,733 @@
+@charset "utf-8";
+/* 
+Table of Contents
+
+#HEADER
+#BILLBOARD
+#BUCKETS
+#FOOTER
+
+
+Colors:
+#e8e8e8 	Body Background
+#777777  	Gray Text
+#555555  	Darker Gray Text
+#4A8439 	Green Link Text
+#87b779 	Lighter Green Text Hover
+#224088 	Navy Blue Headings
+#79b668 	Green Fill (Calls to Action)
+
+*/
+
+
+
+/* Basic Tag styles ------------------------------------------*/
+
+body {  background:#e8e8e8 url(../images/bg_interior.jpg) 50% 80px no-repeat; background-size:100%; font-family: arial, sans-serif; font-size:62.5%;  /* Set 1em = 10px */ }
+h1, h2, h3 {display:inline-block; font-family: "Museo", sans-serif; /* Makes all headers Museo by default */}
+p { display:inline-block; margin:0;  }
+
+h1 { font-family:"Museo", arial, sans-serif; font-size:24px; line-height:28px; color:#224088; text-shadow:1px 1px 0px rgba(255,255,255,0.7); }
+/*h2 { font-family:"Museo", arial, sans-serif; font-size:18px; font-weight:bold; line-height:22px; color:#000; }*/
+h3 { display:block; clear:both; margin:0; padding:10px 0 0 0; font-family:"Museo", arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#224088; }
+
+
+a:link, a:visited { color:#4A8439; text-decoration:none; }
+a:hover, a:active { color:#4A8439; text-decoration:underline; }
+
+/* Basic Tag styles ------------------------------------------*/
+.bg-black { display:block; overflow:hidden; width:100%; min-height:495px; background:#151515 url(../images/bg_black.gif) left bottom repeat-x;}
+.platform { display:block; width:100%; margin:0; min-height:495px; background: url(../images/bg_platform.png) center bottom no-repeat;}
+
+hr {display:block; clear:both; overflow:hidden; margin:20px 0; height:1px; border:none; background:#ccc;}
+
+.columns img { width:100%; height:auto; }
+
+/* Content below the black top -----------------------*/
+#bottom_half { display:block; clear:both; padding-top:30px; }
+
+
+/* HEADER
+===================================================*/
+#fixed_header { display:block; clear:both; width:100%; height:80px; z-index:9999; position:fixed; top:0; background:#151515;}
+/*body#home #fixed_header { display:block; clear:both; width:100%; position:inherit; top:auto; }*/
+
+/* Adds margin to the top so header doesn't cover our content */
+.first-container { margin-top:80px; }
+
+
+#header { display:block; clear:both; width:100%; }
+#logo_wrap { float:left; padding-top:30px;  }
+#logo { float:left; margin-right:10px; width:auto;   }
+#logo:hover {opacity:.8;}
+#logo_wrap h2 { float:left; font-family:'Lato', arial, sans-serif; font-size:13px; font-style:italic; line-height:48px; color:#777; }
+
+
+/* NAV
+===================================================*/
+
+#contact_bar { display:block; float:right; clear:both; padding:3px 10px; font-family:'Lato', arial, sans-serif; font-weight:bold; font-size:12px; color:#777; background:#000; border:1px solid #333;
+
+-webkit-border-bottom-right-radius: 3px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-radius-bottomright: 3px;
+-moz-border-radius-bottomleft: 3px;
+border-bottom-right-radius: 3px;
+border-bottom-left-radius: 3px;
+ }
+
+#contact_bar a { color:#777; text-decoration:none; }
+#contact_bar a:hover { text-decoration:underline; }
+#contact_bar a.request_demo_link { display:inline-block; padding:0 15px; color:#79b668; background:url(../images/right_arrow.gif) 100% 8px no-repeat; }
+
+nav#main_nav { display:block; float:right; clear:both; margin:0; padding:0;  }
+ul#nav_parent { display:block; float:right; clear:both; margin:0;   }
+ul#nav_parent li { display:inline-block; float:left; overflow:hidden; margin:0 5px 0 0; padding:0; list-style:none; }
+ul#nav_parent li a { display:block; padding:16px 10px 17px; font-size:1.3em; font-weight:bold; color:#fff; text-transform:uppercase; text-decoration:none; }
+ul#nav_parent li:hover a { color:#87b779; }
+
+
+a.downarrow { padding-left:15px!important; background:url(../images/nav_downarrow.png) left center no-repeat; }
+
+
+/* Sub-Navigation ------------------------------------------------*/
+ul#nav_parent li ul.children {opacity:0; visibility: hidden; min-width:100px; width:180px; min-height:20px; margin:0; margin-left:-1px; padding:10px 0 0px 0; position:absolute; z-index:9998; background:#333; border:1px solid #444; border-top:none; 
+-webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease; }
+ul#nav_parent li ul.children li {display:block; width:100%; height:auto; border:none; border-top:1px solid #444; border-bottom:1px solid #000; overflow:hidden; }
+ul#nav_parent li ul.children li:hover {background:none;}
+
+ul#nav_parent li ul.children li:first-child {border-top:none;}
+ul#nav_parent li ul.children li:last-child {border-bottom:none;}
+
+ul#nav_parent li ul.children li a {display:block; padding:8px 20px; font-family:'Lato', arial, sans-serif; font-size:13px; font-weight:normal; color:#aaa; text-transform:none; background:none; text-align:left;
+text-shadow: 1px 1px 0px #111; }
+ul#nav_parent li ul.children li a:hover,
+ul#nav_parent li ul.children li a:active { background:#3e3e3e; color:#ccc; text-decoration:none;}
+
+ul#nav_parent li ul#subnav-solutions {width:230px;}
+
+
+/* Show subnav on hover (without jQuery) */
+ul#nav_parent li:hover ul.children { opacity: 1; visibility: visible; }
+
+
+/* HOMPAGE BILLBOARD
+===================================================*/
+#billboard {margin-top:50px;}
+#billboard_message { padding-top:70px; }
+#billboard_message h2 { font-family: "Museo", sans-serif; font-weight:bold; font-size:3.8em; color:#fff;}
+#billboard_message h3 { font-family: "Museo", sans-serif; font-weight:normal; font-size:2.3em; color:#888; line-height:1.2em;}
+
+#billboard_message h3 span.text-grad {display:block; clear:both; }
+
+#billboard_panels { margin-top:0px; width:480px; padding-left:20px; }
+
+.panel { display:inline-block; float:left; overflow:hidden; width:226px; height:142px; margin:7px; cursor:pointer; } 
+
+.panel_img { display:block; clear:both; }
+
+.panel_info { display:block; clear:both; color:#fff; background:#79b668 url(../images/right_arrow_panel.gif) 96% 94% no-repeat; }
+.panel_info h3 { margin:0; padding:0 0 .6em 0; font-family:'Lato', arial, sans-serif; font-size:2em; font-weight:bold; line-height:1.2em; color:#fff; }
+.panel_info p { margin:0; padding:0; font-family:'Lato', arial, sans-serif; font-size:1.4em; line-height:1.2em; }
+.panel_info a { display:block; width:auto; height:auto; padding:2.4em 2em; color:#fff; text-decoration:none;  }
+
+
+/* PANEL FLIP ANIMATION ================================================ */ 
+
+/* entire container, keeps perspective */
+.panel { -webkit-perspective: none; /* Safari and Chrome */ perspective: none; /* 1000 */ }
+
+/* flip the pane when hovered */
+.panel:hover .flipper, .panel.hover .flipper { /*transform: rotateY(180deg);*/ 
+  -moz-transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform:rotateY(180deg);
+
+}
+
+/* flip speed goes here */ 
+.flipper { position: relative; 
+
+  -webkit-transition:0.6s;
+  -moz-transition:0.6s;
+  -ms-transition:0.6s;
+  -o-transition:0.6s;
+  transition:0.6s;
+
+  /* NOT SUPPORTED BY IE */
+  -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+  transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.panel_img, .panel_info { width:226px; height:142px; position: absolute; top:0; left:0; 
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+  backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.panel_img { z-index: 2; }
+
+/* back, initially hidden pane */
+.panel_info { /*transform: rotateY(180deg); */
+
+  -moz-transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform:rotateY(180deg);
+
+}
+
+
+
+/* HOMEPAGE BUCKETS
+===================================================*/
+#bucket_area {display:block; clear:both; padding-top:30px; margin-bottom:30px; }
+
+#bucket_left { display:inline-block; width:460px; height:250px; background:url(../images/bucket_monitor.png) top left no-repeat; }
+#bucket_left h3 { display:inline-block; float:right; margin-bottom:10px; padding:0; width:40%; font-family:"Museo", sans-serif; font-size:18px; line-height:22px; font-weight:bold; color:#224088; text-transform:uppercase;  }
+
+#bucket_left a.link_arrow { display:inline-block; clear:both; float:right; margin-right:0px; padding:0 18px 0 0; font-size:13px; font-weight:bold; color:#555; text-decoration:none; background:url(../images/right_arrow_gray_med.gif) right center no-repeat;    }
+
+#bucket_left a.link_arrow:hover { text-decoration:underline; }
+
+
+#bucket_right { display:inline-block;  }
+#bucket_right h3 { display:inline-block; clear:both; margin-bottom:20px; font-family:"Museo", sans-serif; font-size:1.8em; line-height:2.4em; font-weight:bold; color:#224088; text-transform:uppercase;  }
+
+.feature { display:inline-block; overflow:hidden; padding:20px; width:auto; background:#e8e8e8; box-shadow:0px 0px 20px #bbb; } 
+.feature img { display:inline-block; float:left; border:2px solid #ccc; width:90px;  } 
+.birdseye_writeup { display:inline-block; float:left; padding:5px 20px; width:200px; font-size:12px; line-height:18px; }
+
+.birdseye_writeup p { margin:0 0 10px 0; padding:0; font-size:12px; line-height:18px; color:#555; }
+.birdseye_writeup p a.link_arrow  { padding:0 18px 0 0; font-size:13px; font-weight:bold; color:inherit; text-decoration:none; background:url(../images/right_arrow_gray_med.gif) right center no-repeat; }
+.birdseye_writeup p a.link_arrow:hover { text-decoration:underline; }
+
+
+
+
+/* INTERIOR LAYOUTS ////////////////////////////////////////////////////////////////////////////////////////////////////
+===================================================*/
+
+/* Generic Interior Styles -----------------------------*/
+
+#main_content { display:block; clear:both; padding:30px 0; font-family:"Lato", arial, sans-serif; }
+#main_content a { text-decoration:underline; }
+#main_content a:hover { text-decoration:none; }
+
+#main_content h1 { font-family:"Museo", arial, sans-serif; font-size:24px; line-height:28px; color:#224088; text-shadow:1px 1px 0px rgba(255,255,255,0.7); }
+#main_content h2 { font-family:"Museo", arial, sans-serif; font-size:18px; font-weight:bold; line-height:22px; color:#000; }
+#main_content h3 { display:block; clear:both; margin:0; padding:7px 0 3px 0; font-family:"Museo", arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#224088; }
+#main_content p { margin:0; padding:8px 0; font-size:14px; line-height:22px; font-weight:normal; }
+
+#main_content .lead_in { display:block; clear:both; margin:0 0 30px 0; padding:0 0 30px 0; border-bottom: 1px dotted #777; }
+#main_content .lead_in p { font-family:"Lato", arial, sans-serif; font-weight:normal; font-size:18px; line-height:28px; padding:0; }
+
+
+#content_left, #content_right { overflow:hidden; padding:0 20px; }
+#content_left h1, #content_right h1 { font-family:"Museo", arial, sans-serif; font-size:24px; line-height:28px; color:#224088; text-shadow:1px 1px 0px rgba(255,255,255,0.7); }
+#content_left h2, #content_right h2 { font-family:"Museo", arial, sans-serif; font-size:18px; font-weight:bold; line-height:22px; color:#000; }
+#content_left h3, #content_right h3 { display:block; clear:both; margin:0; padding:7px 0 3px 0; font-family:"Museo", arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#224088; }
+
+#content_left p, #content_right p { margin:0; padding:8px 0; font-size:14px; line-height:22px; font-weight:normal; }
+
+/* Lead-In Styling */
+.lead_in { display:block; clear:both; margin:0 0 30px 0; padding:0 0 30px 0; border-bottom: 1px dotted #777; }
+.lead_in p { font-family:"Lato", arial, sans-serif; font-weight:normal; font-size:18px; line-height:28px; padding:0; }
+
+/*#content_left .lead_in p { font-weight:normal; font-size:18px; line-height:28px; }*/
+
+
+#content_left ul, #content_right ul, 
+#content_left ol, #content_right ol
+{margin:0px 20px; padding-bottom:10px;}
+
+#content_left ul li, #content_right ul li, 
+#content_left ol li, #content_right ol li 
+{font-size:14px; line-height:22px; font-weight:normal; margin-bottom:0;}
+
+#content_left ul li {  padding-left:13px; background:url(../images/green_dash.gif) 0 11px no-repeat; }
+
+#content_left ul.square-bullets { margin:20px; }
+#content_left ul.square-bullets li { padding-left:30px; font-family:"Museo", arial, sans-serif; font-size:18px; font-weight:bold; color:#666; line-height:30px;  background:url(../images/icons/icon-squares-green.gif) 0 50% no-repeat; }
+
+
+/* Apply Text-shadow to all text elements in Content */
+#content_left h1, #content_right h1,
+#content_left h2, #content_right h2,
+#content_left h3, #content_right h3,
+#content_left h4, #content_right h4,
+#content_left p, #content_right p,
+#content_left a, #content_right a,
+#content_left ul li, #content_right ul li,
+#content_left ol li, #content_right ol li
+{ font-family:"Lato", arial, sans-serif; text-shadow:1px 1px 0px rgba(255,255,255,0.6); }
+
+
+
+/* CALLS TO ACTION 
+===================================================*/
+
+#content_left .actions {display:block; clear:both; padding:20px 0;}
+#content_left .actions p { display:inline-block; margin:0 5px; padding:20px; font-size:14px; vertical-align:top; }
+
+a.c2a { display:inline-block; overflow:hidden; margin:0 5px; padding:20px 20px 20px 40px; font-family:"Lato", Arial, sans-serif; font-size:22px; font-weight:normal; text-align:center; text-decoration:none!important; /* Default Color is Green */ color:#fff; background:#79b668 url(../images/icons/icon-squares-green.gif) 10% 50% no-repeat; box-shadow:0px 0px 12px rgba(255,255,255,.3); text-shadow:none!important;}
+a.c2a:hover { text-decoration:none; color:#fff; background-color:#8fc480; }
+
+a.small_c2a { display:inline-block; overflow:hidden; margin:0 5px; padding:10px 20px 10px 40px; font-family:"Lato", Arial, sans-serif; font-size:18px; font-weight:normal; text-align:center; text-decoration:none!important; /* Default Color is Green */ color:#fff; background:#79b668 url(../images/icons/icon-squares-green.gif) 10% 50% no-repeat; box-shadow:0px 0px 12px rgba(255,255,255,.3); text-shadow:none!important;}
+a.small_c2a:hover { text-decoration:none; color:#fff; background-color:#8fc480; }
+
+.feature_box { display:inline-block; overflow:hidden; margin:0 5px; padding:0; background:rgba(255,255,255,.6); }
+.feature_box:hover { background:rgba(255,255,255,.4); }
+
+.feature_box a { display:block; clear:both; overflow:hidden; margin:0; padding:20px; cursor:pointer; text-decoration:none!important; background:url(../images/icons/icon-squares-gray.gif) 95% 10% no-repeat;}
+.feature_box a:hover { color:inherit; text-decoration:none; }
+
+.feature_box h3 { display:block; margin:0; font-family:"Lato", arial, sans-serif; font-size:14px; line-height:22px; font-weight:bold; padding:0!important;   }
+.feature_box p {display:block; margin:0; font-size:13px; line-height:20px; font-weight:normal; color:#333; }
+
+.feature_box .whitepaper { }
+#sidebar .feature_box .whitepaper h3 { color:#224088; /* Navy Blue */ }
+
+.feature_box .casestudy {  }
+#sidebar .feature_box .casestudy h3 { color:#4A8439; /* Green */ }
+
+
+
+
+/* #ADVANTAGES SECTION
+===================================================*/
+
+#billboard-advantages { display:block; clear:both; overflow:hidden; padding:40px 0 0 0;  min-height:100px; height:auto;  }
+
+
+/* #SOLUTIONS SECTION
+===================================================*/
+
+#billboard-solutions { display:block; clear:both; overflow:hidden; padding:40px 0 0 0;  min-height:100px; height:auto; background:url(../images/billboards/billboard-solutions-bg.png) top left no-repeat;  }
+
+#top-message { padding:0 0 0 50px; }
+#billboard-solutions #top-message h1 { display:block; clear:both; margin:0; padding:5px 0; height:auto; font-size:24px; line-height:28px; color:#224088;} 
+#billboard-solutions #top-message h2 { display:block; clear:both; margin:0; padding:10px 0 5px 0; height:auto; font-size:18px; line-height:22px; color:#000; } 
+#billboard-solutions #top-message .lead_in { margin-bottom:0; border-bottom:none;}
+
+.green-border img { border-bottom:2px solid #79b668; }
+
+
+body.solutions #content_left { margin:0 30px; }
+body.matrix-for-media #content_left { margin:0; }
+
+
+/* Thumbnail -----------------------------------------*/
+#content_left .screenshots {display:block; clear:both; overflow:hidden; }
+
+#content_left .screenthumb { display:inline-block; float:left; margin:5px 8px; width:30%; height:auto; }
+#content_left .screenthumb a { display:block; clear:both; overflow:hidden; width:100%; height:90px; cursor:pointer; border:1px solid #aaa; background:url(../images/icons/icon_enlarge.png) top left no-repeat;}
+#content_left .screenthumb img { display:block; clear:both; width:auto; height:200%;   }
+#content_left .screenthumb p { padding:2px 0; font-size:12px; }
+
+#content_left .screenthumb .enlarge {display:block; position:absolute; z-index:10; margin:-16px -27px; width:183px; height:107px; background:url(../images/icons/icon_enlarge.png) top left no-repeat; }
+
+
+/* #COMPANY SECTION
+===================================================*/
+
+/* Billboard  ------------------------------------ */
+#billboard-company { display:block; clear:both; overflow:hidden; min-height:170px; height:auto; }
+#billboard-company h1 { display:block; clear:both; margin:102px 0 0 0; padding:20px; height:auto; background:url(../images/headline_bg_pixels.png) top right repeat-y; }
+#billboard-company h2 { display:inline-block; float:left; padding-left:20px; font-size:20px; line-height:28px; color:#888; text-shadow:1px 1px 0px rgba(255,255,255,0.7); }
+
+#billboard-company .headline_bg { display:block; clear:both; overflow:hidden; margin:102px 0 0 0; padding:20px; height:auto; background:url(../images/headline_bg_pixels.png) top right repeat-y; }
+#billboard-company .headline_bg h1 { display:inline-block; float:left; margin:0; padding:0; font-size:24px; line-height:28px; color:#224088; text-shadow:1px 1px 0px rgba(255,255,255,0.7); background:none; }
+#billboard-company .headline_bg h2 { display:inline-block; float:left; margin:0 0 0 15px; padding:0 0 0 25px; font-size:20px; line-height:28px; color:#555; text-shadow:1px 1px 0px rgba(255,255,255,0.7); background:url(../images/icons/icon-squares-green.gif) 0 50% no-repeat; }
+
+
+.no_photo, #billboard-company.no_photo {min-height:10px!important; background:none!important; }
+.no_photo h1, #billboard-company.no_photo h1 {margin-top:40px!important; }
+
+
+.photo_overview {background:url(../images/billboards/billboard-company.jpg) top left no-repeat; }
+.photo_customer {background:url(../images/billboards/billboard-customer.png) top left no-repeat; }
+.photo_historic {background:url(../images/billboards/billboard-historic.png) top left no-repeat; }
+.photo_board {background:url(../images/billboards/billboard-board.png) top left no-repeat; }
+.photo_working {background:url(../images/billboards/billboard-working.png) top left no-repeat; }
+.photo_contact {background:url(../images/billboards/billboard-contact.png) top left no-repeat; }
+
+#green_callout { margin-left:40px; padding:30px; background:#a1d492 url(../images/bg_callout_green.png) bottom left no-repeat;  }
+#green_callout p { display:inline; font-family:"Museo", Arial, sans-serif; font-size:17px; line-height:28px; font-weight:bold; color:#fff; text-shadow:1px 1px 0px #669c56; }
+#green_callout ul { padding:10px 0; }
+#green_callout ul li { font-family:"Museo", Arial, sans-serif; font-size:15px; line-height:20px; font-weight:bold; color:#fff; text-shadow:1px 1px 0px #669c56;}
+
+#green_callout img {display:inline-block; float:left; margin:0 10px 10px 0; max-width:110px; }
+
+#green_callout p.white_squares {padding-left:20px; background:url(../images/icons/icon-squares-white.gif) 0 50% no-repeat; }
+
+
+
+/* Team Bios -------------------*/
+
+#team-nav {display:none; clear:both; overflow:hidden; padding:0 0 20px 0; }
+#team-nav a.c2a { font-size:18px; padding:10px 15px; color:#333; background:none; box-shadow:none; }
+#team-nav a.current { font-size:18px; padding:10px 15px; color:#fff; background:#888; }
+
+
+.team-member { position:relative; overflow:hidden!important; margin:10px 0; width:220px; height:240px; cursor:pointer; }
+.team-member a { display:block; width:100%; height:100%; margin:0; padding:0; }
+.team-member .team-slider { display:block; overflow:hidden; position:absolute; bottom:0; width:190px; max-height:25px; padding:10px 15px; text-decoration:none; background:rgba(161,212,146,.75); 
+-webkit-transition: max-height 0.7s ease-in-out;
+-moz-transition: max-height 0.7s ease-in-out;
+-o-transition: max-height 0.7s ease-in-out;
+-ms-transition: max-height 0.7s ease-in-out;
+transition: max-height 0.7s ease-in-out;
+	
+}
+.team-member:hover .team-slider { max-height:240px; }
+/*.two-lines:hover .team-slider { height:80px; }  Those with two-line titles need adjustments */
+
+#main_content .team-slider h2 { display:block; margin:0; padding:5px 0 10px 0; font-size:16px; font-weight:bold; color:#fff!important; line-height:16px; text-shadow:1px 1px 0px #7fb470; }
+
+.team-member .team-slider .team-job-title { display:block; margin:0; padding:0; font-size:14px; font-weight:normal; color:#fff; line-height:18px; text-shadow:1px 1px 0px #7fb470; background:url(../images/right_arrow_gray_med.gif) bottom right no-repeat; }
+
+
+/* Detailed Bio Page ---------------------*/
+
+.bio-detail { width:100%; min-height:350px; }
+
+.social-panel { display:block; clear:both; padding:10px 0;  }
+.social-panel .linkedin { display:inline-block; margin:0 5px; width:22px; height:22px; text-indent:-9999px; background:url(../images/icons/icon-linkedin-color.gif) top left no-repeat;   }
+
+
+#main_content .name-title { display:block; clear:both; padding:10px 20px; margin-bottom:20px; background:#a1d492; }
+#main_content .name-title h2 { display:block; clear:both; margin:0; font-family:"Museo", Arial, sans-serif; font-weight:bold; font-size:17px; line-height:22px; font-weight:bold; color:#fff!important; text-shadow:1px 1px 0px #669c56; }
+#main_content .name-title h3 { display:block; clear:both; margin:0; padding:0; font-family:"Lato", Arial, sans-serif!important; font-size:16px; line-height:22px; font-weight:normal; color:#fff!important; text-shadow:1px 1px 0px #669c56; }
+
+
+blockquote { padding-left:25px; background:url(../images/icons/icon-squares-green.gif) 0 10px no-repeat; border:none; }
+blockquote q { display:block; padding-bottom:5px; font-family:"Museo", Arial, sans-serif; font-size:14px; font-style:normal; color:#666; line-height:18px; }
+blockquote cite { font-family:"Museo", Arial, sans-serif; font-size:14px; font-style:normal; color:#666;  }
+
+/* Specific Team Photos */
+#dj-cavanaugh { background:url(../images/team/dj-cavanaugh.jpg) top left no-repeat; }
+#curt-emerick { background:url(../images/team/curt-emerick.jpg) top left no-repeat; }
+#tim-fitzgerald { background:url(../images/team/tim-fitzgerald.jpg) top left no-repeat; background-size:100%; }
+#brenda-hetrick { background:url(../images/team/brenda-hetrick.jpg) top left no-repeat; }
+#gregg-owens { background:url(../images/team/gregg-owens.jpg) top left no-repeat; }
+#achuth-rao { background:url(../images/team/achuth-rao.jpg) top left no-repeat; }
+#george-sens { background:url(../images/team/george-sens.jpg) top left no-repeat; }
+
+
+
+/* #NEWS SECTION
+===================================================*/
+
+.news-item {display:block; clear:both; overflow:hidden; padding:5px 0; }
+.news-item img { display:inline-block; float:left; margin:0 10px 10px 0; width:60px!important; height:auto; max-width:60px; max-height:60px; }
+#content_left .news-item p, #content_right .news-item p {display:inline; font-size:13px!important; line-height:18px!important; }
+
+
+.news-video-item { display:inline-block; float:left; overflow:hidden; margin:0 10px 10px 0; width:100%; }
+.news-video-item img { display:inline-block; float:left; overflow:hidden; margin:0 10px 10px 0; width:155px; height:auto; }
+#content_left .news-video-item p, 
+#content_right .news-video-item p 
+{ display:inline!important; font-size:13px!important; line-height:18px!important; max-width:200px; }
+
+
+/* SIDEBAR
+===================================================*/
+#sidebar { padding-left:40px; }
+
+#sidebar a.c2a { display:block; clear:both; margin:0 0 30px 0; }
+
+#sidebar .feature_box { display:block; clear:both; margin:30px 0; }
+
+#sidebar .video_thumb { display:block; clear:both; overflow:hidden; padding:30px 0; border-top:1px dotted #777;   }
+#sidebar .video_thumb h4 { display:block; margin:0; padding:5px 0;  font-family:"Lato", arial, sans-serif; font-size:13px; line-height:22px; font-weight:bold; color:#444; }
+#sidebar .video_thumb:hover { opacity:.9; }
+
+
+
+
+/* ################################################################################################################ */
+/* FORMS ------------------------------------------------*/
+
+/* Colors:
+
+Normal State
+Background:  #F7F5EF
+Borders:     None
+Text:        #423f35
+
+Focus State
+Background:  #FFFFFF
+Borders:     #423f35
+Text:        #423f35
+
+ */
+
+
+
+/* FORMS -----------------------------------------------------------------*/
+
+form {display:block; overflow:hidden; width:auto; font-size:13px;}
+
+#content form {display:block; font-size:12px;}
+#content form ul, #content fieldset ul {padding:0; list-style:none; list-style-image:none;}
+#content form ul li, #content fieldset ul li {display:block; clear:both; margin:5px 0px; padding:0; list-style:none; list-style-image:none; background: none;}
+
+label {display:block; clear:both; margin:8px 5px 5px 0; padding:0; font-size: 12px; font-style: bold; line-height:18px; color: #4c4c58;}
+
+p.label {font-size: 12px; font-style: bold; line-height:18px; color: #4c4c58;}
+
+input, textarea { display:inline-block; font-size:13px; line-height:20px; color: #4c4c58; border: 1px solid #bababa; background:#fff; margin:2px 0; }
+/*input:hover, textarea:hover {border: 1px solid #bababa; background:#dedede; color: #454743;}
+input:focus, textarea:focus {border: 1px solid #bababa; background:#dedede; color: #454743;}*/
+
+input[type=text], input[type=email], input[type=password], textarea {display:block; width:90%; margin:2px 0; padding:1px 5px; border:none; background:#fff; font-size:13px; border:1px solid #c0c0c0;
+border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+input[type=text]:hover, input[type=email]:hover, input[type=password]:hover {background:#f8f8f8;}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {color:#423f35; background:#f8f8f8;}
+
+input[type="radio"], input[type="checkbox"] { display:inline; clear:none; border:none; background:none; }
+
+textarea { padding:10px; resize:none; }
+textarea:hover { background:#f8f8f8; }
+textarea:focus { background:#f8f8f8; }
+
+select {display:inline-block; margin:2px 0; min-width:190px; font-size:12px; border:1px solid #ccc; background:#ffffff;}
+select:hover {background:#fff;}
+select optgroup {margin:5px 0; padding:0px 2px; font-size:11px; font-weight:normal; font-style:italic; color:#777; border-bottom:1px dotted #ccc;}
+select option {padding:0px 5px; font-size:11px; color:#000; border:none;}
+select option:hover {background:#fff;}
+
+select#heard_about {width:250px;}
+
+
+input[type="radio"] { margin-right:5px; border:none; background:none; vertical-align:-1px; }
+input[type="checkbox"] {margin-right:5px; border:none; background:none; vertical-align:-1px; }
+
+label.inline { display:inline-block; clear:none; width:auto; margin:0; }
+.submit {margin:10px 0; }
+
+.radio_label_inline { display:inline; clear:none; width:auto; margin:0 5px; }
+
+#content_left .or h3 { padding:20px 0; font-style:italic; color:#888; }
+
+
+/* Form Validation Styles ------------------------------------------------*/
+/* Spam Honeypot Field */
+#special, .special { display:none; }
+
+input[type="radio"].error, input[type="checkbox"].error, input.error, select.error, textarea.error { background:#ffffff; border:1px solid #ffc4c4;} 
+label.error {display:block;}
+.errorlabel {color:#ff2b2b;}
+#errors {display:none; clear:both; width:auto; padding:10px 10px 15px 10px; margin:10px 0 10px 0px; background:#fff7f7; border:2px solid #ffc4c4;}
+#errors h3 {display:inline-block; height:auto; margin:0 0 10px 0; padding:0; font-size:11px; font-weight:bold; font-style:italic;}
+
+input.blur { color:#999; }
+
+
+
+/* Table Styles ================================================*/
+
+/* Basic Styling ---------------*/
+table {display:table; margin:20px 0; font-size:12px; line-height:18px; border-collapse:collapse; }
+table td { padding:8px 10px; font-size:13px; line-height:20px; vertical-align:top; }
+table td p { margin:0; padding:0; font-size:13px; line-height:20px;  }
+table tr:nth-child(2n+1) { background:rgba(255,255,255,.8);}
+
+table.data { background:rgba(255,255,255,.3); }
+table.data tr { border-bottom:1px solid #fff; }
+table.data tr:last-child { border-bottom:none; }
+td.year {font-weight:bold; color:#fff; background:#79b668;}
+
+
+
+
+/* FOOTER
+===================================================*/
+
+#footer_wrap {display:block; clear:both; border-top:1px solid #ccc; margin-top:30px; padding-top:20px;}
+
+/* Sitemap Styles  ----------------------------- */
+#sitemap { display:inline-block; }
+
+.sitemap_column { display:inline-block; float:left; width:auto; margin-right:20px;  }
+.sitemap_column li { display:block; margin:0; padding:0; }
+.sitemap_column li a { display:block; padding:0px 5px 2px 8px; font-size:11px;  color:#555; background:url(../images/green_dash.gif) 0% 50% no-repeat; text-decoration:none; }
+.sitemap_column li a:hover {text-decoration:underline;}
+
+.sitemap_column li.title {}
+.sitemap_column li.title a {padding:2px 0; font-size:12px;font-weight:bold;   color:#79b668; background:none;}
+
+
+
+/* Social Media Styles  ----------------------------- */
+
+#social_media {}
+#social_media p {display:inline-block; float:left; margin-right:10px; font-size:11px; color:#555; }
+
+.social-icons {display:inline-block; float:left; overflow:hidden; cursor:pointer; margin:0 5px; width:22px; height:22px; text-indent:-9999px; background:url(../images/icons/icons-social-media.png) top left no-repeat; }
+
+#social-blog {background-position:0 0; } /*  Blogger Icon  */
+#social-blog:hover {background-position:0 100%; }
+#social-linkedin {background-position:-22px 0; } /*  LinkedIn Icon  */
+#social-linkedin:hover {background-position:-22px 100%; }
+
+#social-twitter {background-position:-44px 0; } /*  Twitter Icon  */
+#social-twitter:hover {background-position:-44px 100%; } /*  Twitter Icon  */
+
+#social-facebook {background-position:-66px 0; } /*  Facebook Icon  */
+#social-facebook:hover {background-position:-66px 100%; } /*  Facebook Icon  */
+
+
+
+/* AddThis Widget Styling ########################################################## */
+
+.addthis_button_facebook_like { overflow:hidden; width: 45px !important; /* Hides the counter */}
+
+.addthis-tab-fixed { display:inline-block; clear:both; z-index:8888; position:fixed; top:0; margin:0 0 0 0; width:100%; }
+
+#addthis-tab { display:inline-block; margin:0 0 0 -100px; padding:10px 10px 0px 10px; width:auto; background:rgba(126, 126, 126, .9); cursor:pointer; 
+transition:all .3s ease-in-out;
+transform: translateY(-40px);
+-ms-transform: translateY(-40px); /* IE 9 */
+-webkit-transform: translateY(-40px); /* Safari and Chrome */
+}
+
+#addthis-tab:hover {
+transform: translateY(80px);
+-ms-transform: translateY(80px); /* IE 9 */
+-webkit-transform: translateY(80px); /* Safari and Chrome */
+}
+
+ 
+/*  Add This button style */
+#addthis-tab .addthis_default_style .at300b { display:block; clear:both; margin:5px 15px; padding:0; width:auto; height:12px; text-align:center;  }
+#addthis-tab .addthis_default_style .addthis_button_google_plusone { margin:5px 12px;  }
+
+.share-arrow { display:block; clear:both; padding:5px 0px 5px 5px; font-family:"Lato", arial, sans-serif; font-size:11px; text-align:center; color:#fff; background:url(../images/icons/share-arrow.gif) 10% 50% no-repeat;}
+
+
+/* Hide sharing widget on homepage */
+body#home .addthis-tab-fixed {display:none;}
+
+
+/* ################################################################################################################ */
+
+
+/* FancyBox Widget Styling ########################################################## */
+
+.fancybox-skin { padding:10px!important; background:rgba(85,85,85,1)!important; }
+
+
+
+/* ################################################################################################################ */
+
+
+/* Copyright Styles  ----------------------------- */
+#copyright {display:block; clear:both; padding:0px 0 30px 0; font-family:'Lato', arial, sans-serif; font-size:11px;  }
+
+#copyright a {display:inline; margin:0 2px; color:#555; text-decoration:none; }
+#copyright a:hover {color:#555; text-decoration:underline; }
+
+/* Text Gradient | NOTE: Safari and Firefox Only. */
+.text-grad { background: -webkit-linear-gradient(#fff, #666)!important; -webkit-background-clip: text!important; -webkit-text-fill-color: transparent!important; }
+
+
+/* Extra Layout Utility classes -----------------------------------------------------*/
+
+.pad-bottom { padding-bottom: 20px !important; }
+.pad-top { padding-top: 20px !important; }
+.pad-left { padding-left: 20px !important; }
+.pad-right { padding-right: 20px !important; }
+.pad { padding:20px; }
+
+.margin-bottom { margin-bottom: 20px !important; }
+.margin-top { margin-top: 20px !important; }
+
+
+
+/* DEV styles (Useful for quick debugging) ------------------------------------------*/
+.yellow { background:yellow; }
+.orange { background:orange; }
+.red { background:red; }
+.blue { background:cyan; }
+
+.block {display:block; clear:both; padding:5px 0; overflow:hidden; }
+
+
+/* #Font-Face
+================================================== */
+
+/* Museo Font-Face  */
+@font-face {
+    font-family: "Museo";
+    src: url('../fonts/Museo500-Regular-webfont.eot');
+    src: url('../fonts/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo500-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo500-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo500-Regular-webfont.svg#Museo500Regular') format('svg');
+    font-weight: bold;
+    font-style: normal; }
+	
+
+	
+/* IE Panel Slider ================================================ */ 
+
+/* entire container, keeps perspective */
+html.ie .panel { 
+  -webkit-perspective: none; /* Safari and Chrome */
+  perspective: none; /* 1000 */
+}
+
+/* flip the pane when hovered */
+html.ie .panel:hover .flipper, html.ie .panel.hover .flipper {  -ms-transform:none; transform:none; }
+
+html.ie .panel:hover .panel_img, html.ie .panel.hover .panel_img { -ms-transform: translateY(142px); transform:translateY(142px); }
+
+html.ie .panel:hover .panel_info, html.ie .panel.hover .panel_info { -ms-transform:none; transform:none; }
+
+/* Simple Rollover for IE8 & IE7  */
+html.ie8 .panel:hover .panel_img,
+html.ie8 .panel.hover .panel_img,
+html.ie7 .panel:hover .panel_img,
+html.ie7 .panel.hover .panel_img
+{ display:none; }
+
+
+/* flip speed goes here */ 
+html.ie .panel_img, html.ie .panel_info { position: relative; 
+
+  -webkit-transition:0.6s;
+  -moz-transition:0.6s;
+  -ms-transition:0.6s;
+  -o-transition:0.6s;
+  transition:0.6s;
+
+  /* NOT SUPPORTED BY IE */
+  -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+  transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+html.ie .panel_img, .panel_info { width:226px; height:142px; position: absolute; top:0; left:0; 
+  -webkit-backface-visibility:hidden; /* Chrome and Safari */
+  -moz-backface-visibility:hidden; /* Firefox */
+  -ms-backface-visibility:hidden; /* Internet Explorer */
+  backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+html.ie .panel_img { z-index: 2; }
+
+/* back, initially hidden pane */
+html.ie .panel_info { -ms-transform:none; transform:none; }

@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID"  runat="server" class="interior solutions">
+<form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+    <!-- Interior Billboard -->
+    <div id="billboard-solutions" class="columns sixteen">
+  
+  <div id="top-message" class="columns seven omega">
+      <h1><umbraco:Item field="pageHeadline" runat="server" /></h1>
+      
+      <h2><umbraco:Item field="pageSubHeadline" runat="server" /></h2>
+      <!--<h2>Speaking the Right Language</h2>-->
+      
+      <div class="lead_in">
+      <p><umbraco:Item field="leadInCopy" runat="server" /></p>
+      </div><!--/#lead_in -->
+    
+    </div><!--/.seven -->
+    
+    <div class="columns eight omega">
+      <umbraco:Item field="interiorBillboard" xslt="concat('&lt;img src=&quot;',umbraco.library:GetMedia({0}, false())/umbracoFile, '&quot; alt=&quot;',umbraco.library:GetMedia({0}, false())/@nodeName, '&quot; /&gt;')" xsltDisableEscaping="true" runat="server"/>
+    </div><!--/.eight -->
+    
+  </div><!--/#billboard_int -->
+
+
+
+  
+  <div id="main_content" class="columns sixteen">
+
+    <div id="content_left" class="columns nine alpha omega">  
+    
+    <div class="screenshots">
+      <div class="screenthumb">
+      
+        <a href="images/screenshots/media-crm-1.jpg" title="Account Profile" class="fancybox">
+        <span class="enlarge"><!-- Leave empty for '+' Icon --></span>
+        <img src="images/screenshots/media-crm-1.jpg" alt=""></a>
+        <p>Account Profile</p>
+      </div><!--/.screenthumb -->
+      
+      <div class="screenthumb">
+
+        <a href="images/screenshots/media-crm-2.jpg" title="Prioritize Your Day" class="fancybox">
+        <span class="enlarge"><!-- Leave empty for '+' Icon --></span>
+        <img src="images/screenshots/media-crm-2.jpg" alt="">
+        </a>
+        
+        <p>Prioritize Your Day</p>
+      </div><!--/.screenthumb -->
+      
+      <div class="screenthumb">
+        <a href="images/screenshots/media-crm-3.jpg"  title="Today's View of my Business" class="fancybox">
+          <span class="enlarge"><!-- Leave empty for '+' Icon --></span>
+          <img src="images/screenshots/media-crm-3.jpg" alt="">
+        </a>
+        
+        <p>Today's View of my Business</p>
+      </div><!--/.screenthumb -->
+    </div><!--/.screenshots -->
+    
+    
+<umbraco:Item field="pageCopy" runat="server" />
+<!--
+      <p>Designed by industry experts from TV, Radio, and electronic advertising, Matrix helps build and manage your sales efforts to make your team 100% customer focused.</p>
+      
+
+      <h3 class="list-title">Features:</h3>
+      <ul>
+        <li>Contact Management</li>
+        <li>Pipeline Reports</li>
+        <li>Performance and Forecasts</li>
+        <li>Graphical Dashboard Views</li>
+      </ul>
+      
+      
+      <p>Your sales team is busier than ever and they need the very best CRM solution that speaks their language. Integrated in the Matrix Platform, our CRM is your media-specific virtual assistant that provides access anywhere, from any web-connected device, at any time, and gives you the essential tool you need to grow your business.</p>-->
+      
+      </div><!--/#content_left --> 
+      
+ 
+  <div id="sidebar" class="columns four alpha omega">
+  
+    <a href="demo.aspx" class="c2a green_bg">Schedule Demo</a>
+    
+    <div class="feature_box">
+      <a href="whitepaper.aspx" class="whitepaper">
+          <h3>Download Whitepaper</h3>
+          <p>"An Industry Challenge:  Managing Advertising Sales"</p>
+      </a>
+        
+    </div><!--/#feature -->
+    
+    <div class="video_thumb">
+      <a href="how-it-works.aspx"><img src="images/ph-video_thumb.png" alt=""></a>
+    </div><!--/#video_thumb -->
+  
+  </div><!--/#sidebar -->
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>

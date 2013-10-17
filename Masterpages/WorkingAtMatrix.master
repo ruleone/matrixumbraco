@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/BasePage.master" AutoEventWireup="true" %>
+<%@Register tagprefix="tme" Tagname="commonhead" src="~/usercontrols/commonhead.ascx" %>
+<%@Register tagprefix="tme" Tagname="header" src="~/usercontrols/header.ascx" %>
+<%@Register tagprefix="tme" Tagname="footer" src="~/usercontrols/footer.ascx" %>
+
+<asp:Content ContentPlaceHolderID="BaseContent" runat="server">
+
+<body id="bodyID" runat="server" class="interior company">
+    <form runat="server">
+<!-- ### BEGIN PAGE WRAP ###-->
+
+<tme:header ID="header" runat="server" />
+
+<div class="container first-container"> 
+    
+  <div id="billboard-company" class="photo_working columns sixteen">   
+    <div class="headline_bg">
+      <h1><umbraco:Item field="pageHeadline" runat="server" /></h1>
+      <h2><umbraco:Item field="pageSubHeadline" runat="server" /></h2>
+    </div><!--/.headline_bg -->   
+  </div><!--/#billboard_int -->
+  
+  <div id="main_content" class="columns sixteen">
+  
+       
+  <div class="columns sixteen lead_in">
+  <p><umbraco:Item field="leadInCopy" runat="server" /></p>
+  </div><!--/#lead_in -->
+   
+    
+<div id="content_left" class="columns seven alpha omega">  
+    <umbraco:Item field="leftColumnCopy" runat="server" />     
+</div><!--/#content_left --> 
+
+<div id="content_right" class="columns seven alpha omega">  
+    <umbraco:Item field="rightColumnCopy" runat="server" />     
+</div><!--/#content_right --> 
+      
+
+
+      <div class="actions">
+      <!-- Calls to action -->
+      <a href="mailto:hr@matrixformedia.com?subject=Matrix Solutions - Careers Inquiry" class="c2a green_bg" style="margin:20px 0;">Join our team</a>
+      </div><!--/.actions -->
+
+  </div><!--/#main_content -->
+</div><!-- container -->
+
+
+<tme:footer ID="footer" runat="server" />
+
+<!-- ### END PAGE WRAP ###-->
+</form>
+</body>
+
+</asp:Content>
