@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentType>
+  <Info>
+    <Name>Base Page</Name>
+    <Alias>BasePage</Alias>
+    <Icon>.sprTreeDoc</Icon>
+    <Thumbnail>doc.png</Thumbnail>
+    <Description></Description>
+    <AllowAtRoot>False</AllowAtRoot>
+    <AllowedTemplates>
+      <Template>BasePage</Template>
+      <Template>Content</Template>
+      <Template>Homepage</Template>
+      <Template>Advantages</Template>
+      <Template>Solutions</Template>
+      <Template>Bios</Template>
+      <Template>CompanyOverview</Template>
+      <Template>ContactUs</Template>
+      <Template>HowItWorks</Template>
+      <Template>NewAtMatrix</Template>
+      <Template>OneColumn</Template>
+      <Template>ScheduleDemo</Template>
+      <Template>WhitePaper</Template>
+      <Template>MatrixForMedia</Template>
+      <Template>History</Template>
+      <Template>CustomerSuccess</Template>
+      <Template>BoardOfDirectors</Template>
+      <Template>WorkingAtMatrix</Template>
+    </AllowedTemplates>
+    <DefaultTemplate>Homepage</DefaultTemplate>
+  </Info>
+  <Structure>
+    <DocumentType>BasePage</DocumentType>
+    <DocumentType>Homepage</DocumentType>
+    <DocumentType>Content</DocumentType>
+    <DocumentType>Advantages</DocumentType>
+    <DocumentType>MatrixForMedia</DocumentType>
+    <DocumentType>Solutions</DocumentType>
+    <DocumentType>CompanyOverview</DocumentType>
+    <DocumentType>BoardOfDirectors</DocumentType>
+    <DocumentType>HistoricTimeline</DocumentType>
+    <DocumentType>CustomerSuccess</DocumentType>
+    <DocumentType>WorkingAtMatrix</DocumentType>
+  </Structure>
+  <GenericProperties>
+    <GenericProperty>
+      <Name>Domain Name</Name>
+      <Alias>domainName</Alias>
+      <Type>ec15c1e5-9d90-422a-aa52-4f7622c63bea</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab></Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Title Tag</Name>
+      <Alias>titleTag</Alias>
+      <Type>ec15c1e5-9d90-422a-aa52-4f7622c63bea</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab></Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Meta Description</Name>
+      <Alias>metaDescription</Alias>
+      <Type>ec15c1e5-9d90-422a-aa52-4f7622c63bea</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab></Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Meta Keywords</Name>
+      <Alias>metaKeywords</Alias>
+      <Type>ec15c1e5-9d90-422a-aa52-4f7622c63bea</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab></Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Umbraco Hide In Navigation</Name>
+      <Alias>umbracoNavHide</Alias>
+      <Type>38b352c1-e9f8-4fd8-9324-9a2eab06d97a</Type>
+      <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+      <Tab></Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+  </GenericProperties>
+  <Tabs />
+</DocumentType>

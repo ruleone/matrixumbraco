@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentType>
+  <Info>
+    <Name>Advantages</Name>
+    <Alias>Advantages</Alias>
+    <Icon>doc.gif</Icon>
+    <Thumbnail>docWithImage.png</Thumbnail>
+    <Description></Description>
+    <AllowAtRoot>False</AllowAtRoot>
+    <Master>BasePage</Master>
+    <AllowedTemplates>
+      <Template>Advantages</Template>
+    </AllowedTemplates>
+    <DefaultTemplate>Advantages</DefaultTemplate>
+  </Info>
+  <Structure />
+  <GenericProperties>
+    <GenericProperty>
+      <Name>Interior Billboard</Name>
+      <Alias>interiorBillboard</Alias>
+      <Type>ead69342-f06d-4253-83ac-28000225583b</Type>
+      <Definition>93929b9a-93a2-4e2a-b239-d99334440a59</Definition>
+      <Tab>Content</Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Page Headline</Name>
+      <Alias>pageHeadline</Alias>
+      <Type>ec15c1e5-9d90-422a-aa52-4f7622c63bea</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab>Content</Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[This is the largest heading on the page, the h1 tag.]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Lead-In Copy</Name>
+      <Alias>leadInCopy</Alias>
+      <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+      <Definition>ca90c950-0aff-4e72-b976-a30b1ac57dad</Definition>
+      <Tab>Content</Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[Slightly Larger Lead-In Text.]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Page Copy</Name>
+      <Alias>pageCopy</Alias>
+      <Type>5e9b75ae-face-41c8-b47e-5f4b0fd82f83</Type>
+      <Definition>ca90c950-0aff-4e72-b976-a30b1ac57dad</Definition>
+      <Tab>Content</Tab>
+      <Mandatory>False</Mandatory>
+      <Validation></Validation>
+      <Description><![CDATA[]]></Description>
+    </GenericProperty>
+  </GenericProperties>
+  <Tabs>
+    <Tab>
+      <Id>11</Id>
+      <Caption>Content</Caption>
+    </Tab>
+  </Tabs>
+</DocumentType>
